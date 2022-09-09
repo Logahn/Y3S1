@@ -1,0 +1,30 @@
+table-design {
+    border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+
+th,td {
+    border: 1px solid darkgray;
+    width: 400px;
+    background-color: #c2c4c7;
+    
+ }
+ td{
+    text-align:center;
+    background-color: #f1f1f1;
+    border-collapse: collapse;
+
+}
+.planet-names{
+    border: 3px solid black;
+    border-bottom-style: none;
+    border-top-style: none;
+}
+.planet-name{
+    border: 3px solid black;
+    border-bottom-style: none;
+}
+.planet-pluto{
+    border: 3px solid black;
+    border-top-style: none;
+}
