@@ -1,0 +1,1142 @@
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+* {
+    font-family: 'Kelly Slab', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+  }
+  
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+body {
+    color: #797979;
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color: #1d2434;
+}
+
+a {
+    color: #454545;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #D5B981;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus,
+.form-control:focus {
+    box-shadow: none;
+}
+
+.container-fluid {
+    max-width: 1366px;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #D5B981;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    background: #1d2434;
+}
+
+.back-to-top:hover i {
+    color: #D5B981;
+}
+
+.back-to-top i {
+    color: #1d2434;
+    padding-top: 10px;
+}
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 400;
+}
+
+.navbar .navbar-brand span {
+    font-weight: 400;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    padding: 10px 10px 8px 10px;
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    background: rgb(223, 169, 143, 0.1);
+    transition: ease;
+    border-radius: 10px;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        padding: 20px 60px;
+        background: rgba(0, 0, 0, .1) !important;
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background: #1d2434 !important;
+    }
+    
+    .navbar a.nav-link {
+        padding: 8px 15px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 991.98px) {   
+    .navbar {
+        padding: 15px;
+        background: #1d2434 !important;
+    }
+    
+    .navbar a.nav-link {
+        padding: 5px;
+    }
+    
+    .navbar .dropdown-menu {
+        box-shadow: none;
+    }
+}
+
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.hero {
+    background: url(../assets/about.jpg) no-repeat;
+    background-size: 100%;
+    max-height: 100%;
+}
+.hero .overlay {
+    position: relative;
+    display: flex; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.85); 
+}
+
+.hero .hero-image {
+    position: relative;
+    text-align: right;
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hero .hero-text {
+    position: relative;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-text h1 {
+    color: rgb(179, 115, 68);
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-transform: none;
+}
+
+.hero .hero-text p {
+    color: rgba(255, 255, 255, 0.5); /* TODO: Smaller text*/
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-transform: none;
+}
+
+.hero .hero-text .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8); 
+        background: none;
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.hero .hero-text .btn:hover {
+    color: white;
+    border-color:rgb(223, 169, 143, 0.3);
+    background: rgb(223, 169, 143, 0.3)/* TODO: Button hover */
+}
+
+@media (max-width: 991.98px) {
+    
+    .hero .hero-text {
+        padding-left: 15px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 35px;
+    }
+    
+    .hero .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 12px 30px;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero .hero-text h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .hero .hero-text p {
+        font-size: 14px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero .hero-text h1 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .hero .hero-text p {
+        font-size: 14px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+}
+
+
+/*******************************/
+/******* Page Header CSS *******/
+/*******************************/
+.page-header {
+    position: relative;
+    padding: 150px 0 90px 0;
+    text-align: center;
+    background-color: rgb(10, 10, 10);}
+
+.page-header h2 {
+    position: relative;
+    color: rgb(179, 115, 68); 
+    font-size: 50px;
+    font-weight: lighter;
+    text-transform: none;
+}
+
+.page-header h3 {
+    position: relative;
+    color: rgb(179, 115, 68); 
+    margin-top: 3rem;
+    font-size: 30px;
+    font-weight: lighter;
+    text-transform: none;
+}
+
+.page-header a {
+    position: relative;
+    padding: 0 12px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: none;
+}
+
+.page-header a:hover {
+    color: #ffffff;
+}
+
+.page-header a::after {
+    position: absolute;
+    content: "/";
+    width: 8px;
+    height: 8px;
+    top: -2px;
+    right: -7px;
+    text-align: center;
+    color: #1d2434;
+}
+
+.page-header a:last-child::after {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .page-header h2 {
+        font-size: 35px;
+    }
+
+    .page-header h2 {
+        font-size: 35px;
+    }
+    
+    .page-header a {
+        font-size: 18px;
+    }
+}
+
+
+/*******************************/
+/******* Section Header ********/
+/*******************************/
+.section-header {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+}
+
+.section-header p {
+    margin-bottom: 5px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-header h2 {
+    position: relative;
+    color: rgb(179, 115, 68); 
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 30px;
+    }
+}
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+    background-color: rgb(10, 10, 10);
+}
+.about .section-header {
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.about .about-img {
+    position: relative;
+    height: 100%;
+}
+
+.about .about-img img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about .about-img::before {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    bottom: 5px;
+    left: -5px;
+    background: rgba(255, 255, 255, 0.5);  /* TODO: Image backup  */
+    z-index: 0;
+}
+
+.about .about-img::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: -5px;
+    bottom: -5px;
+    left: 5px;
+    background: transparent;
+    border: 1px solid rgb(111, 46, 0);/* TODO: Image border:*/
+    z-index: 2;
+}
+.about .container{
+  display: flex;
+  flex-direction: row;
+}
+.about .section-header h2{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: none;
+    color:rgb(179, 115, 68); /* TODO: Brown text: */
+}
+
+.about .about-text p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-transform: none;
+    text-align: justify;
+}
+
+
+.about .about-text a.btn {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8); 
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    border-radius: 15px;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .about-text a.btn:hover {
+    color: white;
+    border-color:rgb(223, 169, 143, 0.3);
+    background: rgba(246, 143, 92, 0.1)
+}
+
+@media (max-width: 767.98px) {
+    .about .about-img {
+        margin-bottom: 30px;
+        height: 50vh;
+    }
+}
+
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+    background-color: rgb(10, 10, 10);
+}
+
+.service .service-item {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgb(14, 14, 14);
+    border-radius: 10px;
+}
+.service .section-header p{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: none;
+    color:rgb(179, 115, 68); 
+}
+.service .service-img {
+    position: relative;
+    width: 100%;
+}
+
+.service .service-img img {
+    position: relative;
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.service .service-img::before {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    bottom: 5px;
+    left: -5px;
+    background: rgba(255, 255, 255, 0.5); 
+    z-index: 0;
+}
+.service .service-img::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: -5px;
+    bottom: -5px;
+    left: 5px;
+    background: transparent;
+    border: 1px solid rgb(111, 46, 0);
+    z-index: 2;
+}
+
+.service .service-item h3 {
+    margin: 0;
+    padding: 25px 15px 15px 15px;
+    font-size: 25px;
+    font-weight: 700;
+    color:rgb(179, 115, 68); 
+}
+
+.service .service-item p {
+    margin: 0;
+    padding: 0 25px 25px 25px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5); 
+    text-transform: none;
+}
+
+.service .service-item a.btn {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8); 
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.service .service-item:hover a.btn {
+    border-color:rgb(223, 169, 143, 0.3);
+    color: white;
+    background: rgb(223, 169, 143, 0.3);
+}
+
+
+/*******************************/
+/********* Pricing CSS *********/
+/*******************************/
+.price {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+    background-color: rgb(10, 10, 10);
+}
+
+.price .section-header p{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: none;
+    color:rgb(179, 115, 68); 
+}
+
+.price .price-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 30px;
+    background: rgb(14, 14, 14);
+    transition: .3s;
+    border-radius: 10px;
+}
+
+.price .price-item:hover {
+    background: rgb(179, 115, 68); 
+}
+
+.price .price-img {
+    position: relative;
+    width: 100px;
+}
+
+.price .price-img img {
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.price .price-img::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    background: transparent;
+    border: 1px solid  rgb(179, 115, 68); 
+    z-index: 2;
+}
+
+.price .price-text {
+    position: relative;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.price .price-text h2 {
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+    color: white;
+}
+
+.price .price-text h3 {
+    position: relative;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/*******************************/
+/*********** Team CSS **********/
+/*******************************/
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+    background-color: rgb(10, 10, 10);
+}
+.team .section-header p{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: none;
+    color:rgb(179, 115, 68); 
+}
+
+.team .team-item {
+    margin-bottom: 30px;
+}
+
+.team .team-img {
+    position: relative;
+}
+
+.team .team-img::after {
+    position: absolute;
+    content: "";
+    top: 15px;
+    right: 15px;
+    bottom: -15px;
+    left: 15px;
+    background: transparent;
+    border: 1px solid rgb(14, 14, 14);
+    transition: .3s;
+    z-index: 1;
+}
+
+.team .team-img img {
+    width: 100%;
+}
+
+.team .team-text {
+    position: relative;
+    padding: 10px 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    background:rgb(14, 14, 14);
+    transition: .3s;
+    z-index: 2;
+}
+
+.team .team-text h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.team .team-text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.team .team-item:hover .team-text {
+    background: rgb(179, 115, 68); 
+}
+
+.team .team-item:hover .team-img::after {
+    border-color: rgb(179, 115, 68); 
+}
+
+
+
+
+/*******************************/
+/******** Portfolio CSS ********/
+/*******************************/
+.portfolio {
+    position: relative;
+    padding: 45px 0 15px 0;
+    background: #ffffff;
+}
+
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: -15px 0 25px 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    color: #1d2434;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 0;
+    background: none;
+    border: 2px solid #1d2434;
+    transition: .3s;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    background: #1d2434;
+    color: #D5B981;
+}
+
+.portfolio .portfolio-item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.portfolio .portfolio-item:hover {
+    margin-top: -10px;
+}
+
+.portfolio .portfolio-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.portfolio .portfolio-wrap a::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    background: transparent;
+    border: 1px solid #F6F6F7;
+    transition: .3s;
+    z-index: 1;
+}
+
+.portfolio .portfolio-wrap:hover a::after {
+    border-color: #D5B981;
+}
+
+.portfolio img {
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+
+/*******************************/
+/********* Contact CSS *********/
+/*******************************/
+.contact {
+    position: relative;
+    width: 100%;
+    margin: 45px 0;
+    background-color: rgb(10, 10, 10);
+}
+
+.contact .container-fluid {
+    background: url(../img/contact.jpg) left center no-repeat;
+    background-size: contain;
+}
+
+.contact .contact-form {
+    position: relative;
+    padding: 90px 0 90px 45px;
+    background-color: rgb(10, 10, 10);
+}
+
+.contact .contact-form input {
+    padding: 15px 0;
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid  white; 
+    
+}
+
+.contact .contact-form textarea {
+    height: 90px;
+    padding: 15px 0;
+    background: rgb(10, 10, 10);
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid  white; 
+}
+
+.contact .contact-form .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8); 
+        background: none;
+    border: 2px solid rgba(255, 255, 255, 0.8); 
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.contact .contact-form .btn:hover {
+    color: white;
+    border-color:rgb(223, 169, 143, 0.3);
+    background: rgb(223, 169, 143, 0.3)/* TODO: Button hover */
+}
+
+.contact .help-block ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@media (max-width: 767.98px) {
+    .contact .container-fluid {
+        background: none;
+    }
+    
+    .contact .contact-form {
+        padding: 90px 0;
+    }
+}
+
+
+/*******************************/
+/**** Appointment Page CSS *****/
+/*******************************/
+.appointment {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+    background-color: rgb(10, 10, 10);
+}
+
+.appointment .section-header h2{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: none;
+    color:rgb(179, 115, 68); 
+}
+
+.appointment img {
+    width: 100%;
+    margin: 0 0 25px 0;
+}
+
+
+.appointment .table .avatar {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+   border-radius: 50%;
+  }
+.appointment .table th {
+    color: white;
+    border: 1px solid rgb(179, 115, 68); 
+    text-align: center;
+}
+.appointment .table td {
+    color: white;
+    border: 1px solid rgb(179, 115, 68); 
+    text-align: center;
+}
+tr td:first-child {
+    width: 1%;
+    white-space: nowrap;
+}
+tr td:nth-child(3){
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.appointment .table .btn{
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8); 
+    background: none;
+    border: 1px solid rgb(179, 115, 68); 
+    border-radius: 15px;
+    transition: .3s;
+    text-transform: none;
+}
+
+.appointment .table .btn:hover {
+    color: white;
+    border-color:rgb(223, 169, 143, 0.3);
+    background: rgb(223, 169, 143, 0.3)/* TODO: Button hover */
+}
+
+.appointment .ul-group {
+    padding: 0;
+    list-style: none;
+}
+
+.appointment .ul-group li {
+    margin-left: 2px;
+}
+
+.appointment .ul-group li::before {
+    position: relative;
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.appointment .ol-group {
+    padding-left: 18px;
+}
+
+
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    padding-top: 90px;
+    background-color: rgb(10, 10, 10);
+        text-transform: none;
+}
+.footer .container {
+    position: relative;
+}
+
+.footer .footer-contact,
+.footer .footer-link {
+    position: relative;
+    margin-bottom: 45px;
+    color: #999999;
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2{
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(179, 115, 68); 
+    text-transform: none;
+}
+
+.footer .footer-link a {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    color: #999999;
+    transition: .3s;
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+    color:rgb(179, 115, 68); 
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+.footer .footer-contact p,
+.footer .footer-link{
+    text-transform: none;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 20px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 18px;
+    color: rgb(179, 115, 68); 
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #999999;
+}
+
+.footer .footer-map h2{
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 12rem;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(179, 115, 68); 
+    text-transform: none;
+}
+.footer .footer-map iframe{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.footer .footer-newsletter .form {
+    display:none;
+    position: relative;
+    width: 100%;
+}
+
+.footer .copyright {
+    padding: 0 30px;
+}
+
+.footer .copyright .row {
+    background: #ffffff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #454545;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #1d2434;
+    font-weight: 700;
+}
+
+.footer .copyright p a:hover {
+    color: #D5B981;
+}
+
+@media (max-width: 767.98px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
