@@ -1,0 +1,6 @@
+businessCard = imread('businessCard.png');
+ocrResults = ocr(businessCard);
+Iocr = insertObjectAnnotation(businessCard, 'rectangle', ...
+ocrResults.WordBoundingBoxes, ...
+ocrResults.WordConfidences);
+figure; imshow(Iocr);
