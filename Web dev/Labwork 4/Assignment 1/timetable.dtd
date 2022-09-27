@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE timetable[
+<!ELEMENT timetable (day*)>
+<!ELEMENT day (lesson+)>
+<!ELEMENT lesson (timeFrom, timeTo, subject, teacher, room?)>
+<!ELEMENT timeFrom (#PCDATA)> 
+<!ELEMENT timeTo (#PCDATA)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT teacher (#PCDATA)>
+<!ELEMENT room (#PCDATA)>
+<!ATTLIST day
+dayOfWeek CDATA #REQUIRED>
+<!ATTLIST lesson
+type CDATA #REQUIRED>
+]>
