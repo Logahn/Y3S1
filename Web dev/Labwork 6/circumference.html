@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title> Circle </title>
+</head>
+<center>
+
+    <body>
+
+        <h4>Circle calculator</h4>
+        <form class = "form" name="form1">
+
+            Radius of circle <input class="box" type="number" name="radius"> <br>
+            Diameter of circle <input class="box" type="text" name="diameter" disable> <br>
+            Circumference of circle <input class="box" type="text" name="circumference" disable> <br>
+            Area of circle <input class="box" type="text" name="area" disable> <br>
+
+            <input class="buttons-reset" type="reset" value="Очистить">
+            <input class="buttons-calculate" type="button" value="Вычислить" onClick="document.form1.diameter.value = document.form1.radius.value * 2,
+                document.form1.circumference.value = document.form1.radius.value * 2 * Math.PI,
+                document.form1.area.value = Math.pow(document.form1.radius.value * Math.PI,2)"><br>
+        </form>
+
+    </body>
+</center>
+
+</html>

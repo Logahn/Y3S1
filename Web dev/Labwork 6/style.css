@@ -1,0 +1,44 @@
+.form{
+    border-style: groove;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(105, 220, 255, 0.533);
+}
+
+.box{
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.buttons-reset {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.buttons-calculate{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.buttons-reset:hover{
+    background-color: rgb(255, 151, 151);
+}
+.buttons-calculate:hover{
+    background-color: rgba(105, 255, 120, 0.878);
+}
