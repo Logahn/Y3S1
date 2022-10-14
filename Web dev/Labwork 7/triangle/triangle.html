@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title> Triangle Calculator </title>
+    <script type="text/JavaScript">
+
+function def(obj) {
+    var side_a = Number(obj.side_A.value);
+    var side_b = Number(obj.side_B.value);
+    var side_c = Number(obj.side_C.value);
+
+    if (side_a > 0 && side_b > 0 && side_c > 0  && side_a == side_b && side_b == side_c && side_c == side_a)
+        {obj.res.value = "Равносторонний треугольник"}
+
+   
+    if(side_a > 0 && side_b > 0 && side_c > 0  &&
+    side_a != side_b && side_a != side_c ||
+    side_b != side_c && side_b != side_a ||
+    side_c != side_a && side_c != side_b){obj.res.value = "Скалярный треугольник"}
+
+    if(side_a > 0 && side_b > 0 && side_c > 0  &&
+    side_a == side_b && side_a != side_c ||
+    side_b == side_c && side_b != side_a ||
+    side_c == side_a && side_c != side_b) {obj.res.value = "Равнобедренный треугольник"}
+
+    
+    if (side_a < 1 || side_b < 1 || side_c < 1) {obj.res.value = "неверное значение"}
+
+}
+
+</script>
+</head>
+<center>
+
+    <body>
+        <h2>Определение типа треугольника <br> на основе длины сторон</h2>
+        <form  name="form" class="form">
+            Сторона А <input class="box" type="number" name="side_A" placeholder="0"> <br>
+            Сторона B <input class="box" type="number" name="side_B" placeholder="0"> <br>
+            Сторона C <input class="box" type="number" name="side_C" placeholder="0"> <br>
+            <input class="result-box" type="text" name="res" placeholder="Введите необходимые значения"> <br>
+            <input class="buttons-reset" type="reset" value="Очистить">
+            <input class="buttons-calculate" type="button" value="Определить" onClick="def(form)">
+            <br>
+
+        </form>
+    </body>
+</center>
+
+</html>

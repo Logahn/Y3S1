@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Стоимость подписки
+    </title>
+    <script type="text/JavaScript">
+
+function def(obj){
+var n=Number(obj.num.value);
+d=document;
+var s="";
+switch(n){
+case 1:s=60;break;
+case 3:s=168;break;
+case 6:s=312;break;
+case 12:s=540;break;
+default:s="неверен срок подписного периода";}
+obj.res.value=s;
+}
+</script>
+</head>
+
+<body>
+    <h4>Вычисление стоимости подписки</h4>
+    <form name="form1">
+        Введите срок подписного периода:<input type="text" size=2 name="num"><br>
+        <input type="button" value=Определить onClick="def(form1)"><br>
+        Стоимость подписки:<input type="text" size=34 name="res"><br>
+        <input type="reset">
+    </form>
+</body>
+
+</html>
