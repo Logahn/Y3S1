@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title> Perfect Number </title>
+    <script type="text/JavaScript">
+
+function def(obj) {
+    var n = Number(obj.variable_n.value);
+    var divisors = [];
+    var sum = 0;
+
+    for (i=1;i<=n-1;i++){
+        if (n%i==0){
+            divisors.push(i);
+        }
+    }
+    for (let i = 0; i < divisors.length; i++) {
+    sum += divisors[i];
+}
+    obj.box_divisors.value = divisors;
+    obj.box_sum.value = sum;
+
+   
+    if(n == 0) {obj.res.value = "Неверный ввод";}
+    else if(n == sum){
+        obj.res.value = "Совершенное число";
+    }
+    else{obj.res.value = "Несовершенное число";}
+
+}
+
+</script>
+</head>
+<center>
+
+    <body>
+        <h2>Определитель совершенного<br> числа</h2>
+        <form  name="form" class="form">
+            Значение n <input class="box" type="number" name="variable_n" placeholder="0"> <br>
+            Делители <input class="box" type="text" name="box_divisors" placeholder="0" disabled> <br>
+            Сумма делителей<input class="box" type="number" name="box_sum" placeholder="0" disabled> <br>
+            <input class="result-box" type="text" name="res" placeholder="" disabled> <br>
+            <input class="buttons-reset" type="reset" value="Очистить">
+            <input class="buttons-calculate" type="button" value="Определить" onClick="def(form)">
+            <br>
+
+        </form>
+    </body>
+</center>
+
+</html>
