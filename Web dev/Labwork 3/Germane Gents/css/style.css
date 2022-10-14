@@ -1096,7 +1096,7 @@ tr td:nth-child(3){
     text-transform: none;
 }
 .footer .footer-map iframe{
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
     margin-bottom: 1rem;
 }
 .footer .footer-newsletter .form {
