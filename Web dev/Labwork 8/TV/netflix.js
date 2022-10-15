@@ -1,5 +1,5 @@
 
-function mov(obj) {
+function mov() {
   function movie_rating(movie_name, rating) {
     this.movie_name = movie_name;
     this.rating = rating;
