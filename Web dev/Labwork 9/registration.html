@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Registration Card</title>
+    <script type="text/javascript" src="registration.js"></script>
+    <link href="registration.css" rel="stylesheet">
+</head>
+<center>
+
+    <body>
+
+        <script>NumLine();</script>
+        <h2>Registration Card</h2>
+        <form name="form" class="form">
+            <text class="body">
+                <text class="star">*</text>
+                <text class="field-name">
+                    ФИО</text>
+            </text>
+            <input class="box" type="text" name="variable_n" placeholder="" required> <br>
+            <text class="body">
+                <text class="field-name">
+                    Company</text>
+            </text> <input class="box" type="text" name="box_divisors" placeholder=""> <br>
+            <text class="body">
+                <text class="field-name">
+                    Telephone</text>
+            </text>
+            <input class="box" type="text" name="box_sum" placeholder="" > <br>
+            <text class="body">
+                <text class="star">*</text>
+                <text class="field-name">
+                    Email</text>
+            </text>
+            <input class="box" type="text" name="box_sum" placeholder="" required> <br>
+            <input class="buttons-reset" type="reset" value="Очистить">
+            <input class="buttons-go" type="submit" value="Отправить" onClick="def(form)">
+            <br>
+            <text class="footer">
+                <text class="warning">*</text>
+                <text class="warning-note">
+                    Fields are compulsory</text>
+            </text>
+
+        </form>
+    </body>
+</center>
+
+</html>

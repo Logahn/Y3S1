@@ -1,0 +1,88 @@
+.form{
+    border-style: groove;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: RGB(250, 229, 181);
+    background: linear-gradient(#ffecd2, #fcb69f, #ffecd2);
+}
+
+.box{
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 1px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    display:flex;
+}
+
+
+
+.buttons-reset {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 2px;
+}
+
+.buttons-go{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin: 2px;
+}
+
+.buttons-reset:hover{
+    background-color: rgb(255, 151, 151);
+}
+.buttons-go:hover{
+    background-color: rgba(145, 226, 153, 0.878);
+}
+.footer{
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.warning{
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    color:red;
+}
+.warning-note{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    margin-left:2px;
+}
+
+.body{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.star{
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    color:red;
+}
+.field-name{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    margin-left:2px;
+}
