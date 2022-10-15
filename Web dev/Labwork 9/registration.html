@@ -9,37 +9,38 @@
 
     <body>
 
-        <script>NumLine();</script>
-        <h2>Registration Card</h2>
+        <!-- <script>NumLine();</script> -->
+        <h2>Регистрационная Карточка</h2>
         <form name="form" class="form">
             <text class="body">
                 <text class="star">*</text>
                 <text class="field-name">
                     ФИО</text>
             </text>
-            <input class="box" type="text" name="variable_n" placeholder="" required> <br>
+            <input class="box" type="text" name="name" placeholder=""required > <br>
             <text class="body">
                 <text class="field-name">
-                    Company</text>
-            </text> <input class="box" type="text" name="box_divisors" placeholder=""> <br>
-            <text class="body">
-                <text class="field-name">
-                    Telephone</text>
-            </text>
-            <input class="box" type="text" name="box_sum" placeholder="" > <br>
+                    Компания</text>
+            </text> <input class="box" type="text" name="company" placeholder="" > <br>
             <text class="body">
                 <text class="star">*</text>
                 <text class="field-name">
-                    Email</text>
+                    Телефон</text>
             </text>
-            <input class="box" type="text" name="box_sum" placeholder="" required> <br>
+            <input class="box" type="text" name="telephone" placeholder="" required> <br>
+            <text class="body">
+                <text class="star">*</text>
+                <text class="field-name">
+                    Электронная почта</text>
+            </text>
+            <input class="box" type="text" name="email" placeholder="" required> <br>
             <input class="buttons-reset" type="reset" value="Очистить">
-            <input class="buttons-go" type="submit" value="Отправить" onClick="def(form)">
+            <input class="buttons-go" type="submit" value="Отправить" onClick="RegForm(form)">
             <br>
             <text class="footer">
                 <text class="warning">*</text>
                 <text class="warning-note">
-                    Fields are compulsory</text>
+                    Поля обязательны для заполнения</text>
             </text>
 
         </form>
