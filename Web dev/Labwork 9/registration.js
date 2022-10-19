@@ -5,6 +5,12 @@ function RegForm(obj) {
     if (ans) submit();
   }
 
+const name_string = String(obj.name.value);
+if(name_string == ''){
+    name_test = false;
+    alert("Поле фамилии пусто");
+}
+
 const phone_string = String(obj.telephone.value);
 const phone_regex = new RegExp("^[\+]?[0-9]{1}?[\s\.]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{2}[-\s\.]?[0-9]{2}$");
 const phone_match = phone_regex.exec(phone_string);
@@ -14,7 +20,7 @@ if (phone_match){
 }
 else {
   phone_test = false;
-alert("Enter correct telephone format");
+alert("Введите правильный формат телефона");
 }
 
 
@@ -27,11 +33,10 @@ const email_match = regex.exec(email_string);
   }
   else {
     email_test = false;
-  alert("Enter correct email format");
+  alert("Введите правильный формат электронной почты");
 }
-if(email_test == true && phone_test == true){
+if(email_test == true && phone_test == true && name_test == true){
     CheckData();
 }
-
 
 }
