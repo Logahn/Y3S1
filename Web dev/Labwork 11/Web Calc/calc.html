@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="calc.css" rel="stylesheet">
+    <script src="calc.js"></script>
+
+    <title>PHP Calculator</title>
+</head>
+<center>
+
+    <body>
+        <?php if(!isset($_GET['iframe'])){?>
+        <h2>PHP Calculator</h2>
+        <?php } ?>
+
+        <form class="form" name="form" action=calc.php method=POST>
+            <?php if(isset($Result) && is_numeric($Result)){?>
+            <input id="Result" name="Result" type="number" class="result-box" disabled placeholder="0"
+                value="<?php echo $Result; ?>">
+            <input class="buttons-operand" type="submit" name="Calculate" value="+">
+            <input class="buttons-operand" type="submit" name="Calculate" value="-">
+            <input class="buttons-operand" type="submit" name="Calculate" value="x">
+            <input class="buttons-operand" type="submit" name="Calculate" value="/"><br>
+            <br>
+
+            First Number <input id="Operand1" name="Operand1" type="number" class="box"
+                value="<?php echo isset($Operand1)?$Operand1:''; ?>">
+            Second Number <input id="Operand2" name="Operand2" type="number" class="box"
+                value="<?php echo isset($Operand2)?$Operand2:''; ?>">
+            <input class="buttons-reset" type="reset" value="Очистить">
+
+            <!-- Error Messages -->
+            <?php } if(isset($Error)){?>
+            <br>Error:<input class="error" role="alert" type="text" disabled>
+            <?php echo $Error; ?>
+            <?php } ?>
+        </form>
+
+
+    </body>
+</center>
+
+</html>
